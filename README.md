@@ -6,7 +6,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 Run `npm install` followed by `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## BUG1
-#### router is not being disposed when destyoing an app (NgModuleRef)
+#### router is not being disposed when destroying an app (NgModuleRef)
 
 Reproduce Steps:
  1. reload app
@@ -23,7 +23,7 @@ Actual Result
 
 
 ## BUG2
-#### modules are not being destroyed when destyoing a platform (PlatformRef)
+#### modules are not being destroyed when destroying a platform (PlatformRef)
      
 Reproduce Steps:
  1. reload app
