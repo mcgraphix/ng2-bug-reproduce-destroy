@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+nav{
+  margin-top: 5px;
+  padding: 5px;
+}
+
+#destruction-panel nav{
+  display: inline-block;
+  background-color: pink;
+  margin-bottom: 5px;
+}
+
+#destruction-panel nav,
+#destruction-panel button{
+  color: firebrick;
+}
+
+#outter-app nav{
+  background-color: #eee;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+#outter-app{
+  padding: 10px;
+  background-color: #ccc;  ;
+}

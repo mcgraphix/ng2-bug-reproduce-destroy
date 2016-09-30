@@ -1,0 +1,14 @@
+:host{
+  margin-top: 5px;
+  display: block;
+  border: 1px #888 solid;
+  background-color: #414141;
+  color: #eee;
+  padding: 5px;
+}
+
+.router-outlet-wrapper{
+  border: 1px #eee solid;
+  margin-top: 10px;
+  padding: 5px;
+}

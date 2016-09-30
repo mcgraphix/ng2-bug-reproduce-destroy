@@ -1,31 +1,38 @@
-# BugReproduce
+# Bug Reproduce - destroy NgModuleRef / Platform
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## BUG1
+router is not being disposed when destyoing an app (NgModuleRef)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+Reproduce Steps:
+1. reload app
+2. wait for angular app to load.
+3. click on button "**destroy app**" (from destruction panel).
+4. click on button "navigate to some non angular route (1) / (2)" (from outter app navigation)
 
-## Build
+Expected Result:
+- router should be disposed after app gets destroyed and stop handle navigation events 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Actual Result
+- router is not disposed. it keeps intercepting routing events
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## BUG2
+modules are not being destroyed when destyoing a platform (PlatformRef)
+     
+Reproduce Steps:
+1. reload app
+2. wait for angular app to load.
+3. click on button "**destroy platform**" (from destruction panel).
+4. optional - repeat step 2
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the app via `ng serve`.
+Expected Result:
+- app should be destroyed after platform gets destroyed 
 
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Actual Result
+- app is not destroyed. it keeps running as before. (the modules list in platform is empty!)

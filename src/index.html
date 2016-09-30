@@ -7,8 +7,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="script.js"></script>
 </head>
 <body>
-  <app-root>Loading...</app-root>
+
+  <section id="destruction-panel">
+    <nav>
+      <div>destruction panel</div>
+      <button onclick="destroyPlatform()">destroy platform</button>
+      <button onclick="destroyApp()">destroy app</button>
+    </nav>
+  </section>
+
+  <section id="outter-app">
+    <heading>Outter App (SPA)</heading>
+    <nav>
+      <div>outter app navigation</div>
+      <button onclick="navigateTo('some-route-1')">navigate to some non angualr route (1)</button>
+      <button onclick="navigateTo('some-route-2')">navigate to some non angualr route (2)</button>
+    </nav>
+    <section>
+      ....
+    </section>
+    <section id="ng2-app">
+      <app-root>Loading...</app-root>
+    </section>
+  </section>
+
 </body>
 </html>
