@@ -35,4 +35,4 @@ Expected Result:
 - app should be destroyed after platform gets destroyed 
 
 Actual Result
-- app is not destroyed. it keeps running as before. (the modules list in platform is empty!)
+- app is not destroyed. it keeps running as before. (the modules list in platform is always empty!)
