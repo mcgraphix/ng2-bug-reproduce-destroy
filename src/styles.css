@@ -16,13 +16,13 @@ nav{
   color: firebrick;
 }
 
-#outter-app nav{
+#outer-app nav{
   background-color: #eee;
   margin-top: 5px;
   padding: 5px;
 }
 
-#outter-app{
+#outer-app{
   padding: 10px;
   background-color: #ccc;  ;
 }
